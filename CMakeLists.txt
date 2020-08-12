@@ -5,7 +5,8 @@ include(CTest)
 enable_testing()
 
 set(C_STANDARD C99)
-add_executable(CMakeLists main.c)
+add_compile_options(-Wall -Wextra -pedantic -Werror)
+add_library(Ex1 SHARED Matrix.c ErrorCode.c)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
